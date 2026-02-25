@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+  <title>FitLife</title>
+
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LANDING -->
+  <div id="landing" class="page">
+    <div class="card hero">
+      <div class="brand">
+        <div class="logo">🏃</div>
+        <div>
+          <h1>FitLife Assistant</h1>
+          <p class="muted">Welcome! Continue to your healthy life.</p>
+        </div>
+      </div>
+
+      <div class="btnRow">
+        <button class="btn primary" onclick="openPage('login')">🔑 Login</button>
+        <button class="btn" onclick="openPage('register')">📝 Register</button>
+      </div>
+
+      <div class="tiny muted">
+        Tip: Use <b>Register</b> once, then login every time you open the app.
+      </div>
+    </div>
+  </div>
+
+  <!-- REGISTER -->
+  <div id="register" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="openPage('landing')">←</button>
+      <div class="topTitle">Create Account</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <label class="label">Username</label>
+      <input class="input" type="text" id="regUsername" placeholder="Username (e.g. Ali)" />
+
+      <label class="label">Password</label>
+      <input class="input" type="password" id="regPassword" placeholder="Min 4 characters" />
+
+      <button class="btn primary full" onclick="registerUser()">Register</button>
+
+      <div class="divider"></div>
+
+      <div class="muted center">Already registered?</div>
+      <button class="btn full" onclick="openPage('login')">Go to Login</button>
+    </div>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="login" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="openPage('landing')">←</button>
+      <div class="topTitle">Login</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <label class="label">Username</label>
+      <input class="input" type="text" id="loginUsername" placeholder="Username" />
+
+      <label class="label">Password</label>
+      <input class="input" type="password" id="loginPassword" placeholder="Password" />
+
+      <button class="btn primary full" onclick="loginUser()">Login</button>
+
+      <div class="divider"></div>
+
+      <div class="muted center">No account?</div>
+      <button class="btn full" onclick="openPage('register')">Create Account</button>
+    </div>
+  </div>
+
+  <!-- MAIN MENU -->
+  <div id="menu" class="page">
+    <div class="topbar">
+      <div class="topTitle">FitLife</div>
+      <button class="pill" onclick="openPage('profile')">👤</button>
+    </div>
+
+    <div class="card">
+      <p id="welcomeText" class="welcome"></p>
+      <div class="grid">
+        <button class="tile" onclick="openPage('steps')">
+          <div class="tileIcon">👣</div>
+          <div class="tileTitle">Steps</div>
+          <div class="tileSub muted">Track daily steps</div>
+        </button>
+
+        <button class="tile" onclick="openPage('mood')">
+          <div class="tileIcon">😊</div>
+          <div class="tileTitle">Mood</div>
+          <div class="tileSub muted">Daily mood check</div>
+        </button>
+
+        <button class="tile" onclick="openPage('stats')">
+          <div class="tileIcon">📊</div>
+          <div class="tileTitle">Stats</div>
+          <div class="tileSub muted">Weekly chart</div>
+        </button>
+
+        <button class="tile" onclick="openPage('about')">
+          <div class="tileIcon">ℹ️</div>
+          <div class="tileTitle">About</div>
+          <div class="tileSub muted">App info</div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div id="steps" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="goBack()">←</button>
+      <div class="topTitle">Daily Steps</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <div class="bigStat">
+        <div class="bigNumber" id="stepCount">0 steps</div>
+        <div class="muted">Daily goal: <b><span id="goalText">10000</span></b> steps</div>
+      </div>
+
+      <div id="progressContainer">
+        <div id="progressBar">0%</div>
+      </div>
+
+      <div class="btnRow">
+        <button class="btn" onclick="addSteps(100)">+100</button>
+        <button class="btn" onclick="addSteps(500)">+500</button>
+        <button class="btn danger" onclick="resetSteps()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOOD -->
+  <div id="mood" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="goBack()">←</button>
+      <div class="topTitle">Mood</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sectionTitle">How do you feel today?</h2>
+
+      <div class="moodRow">
+        <button class="moodBtn" onclick="setMood('Happy')">😄<span>Happy</span></button>
+        <button class="moodBtn" onclick="setMood('Normal')">🙂<span>Normal</span></button>
+        <button class="moodBtn" onclick="setMood('Tired')">😴<span>Tired</span></button>
+      </div>
+
+      <p id="moodResult" class="moodResult"></p>
+      <p id="moodHint" class="tiny muted" style="display:none;"></p>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div id="stats" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="goBack()">←</button>
+      <div class="topTitle">Weekly Stats</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sectionTitle">Weekly Steps Chart</h2>
+      <canvas id="stepChart" width="320" height="220"></canvas>
+      <div id="chartHint" class="tiny muted"></div>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div id="profile" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="goBack()">←</button>
+      <div class="topTitle">Profile</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <p id="profileName" class="profileName"></p>
+
+      <div class="btnRow" style="flex-direction:column;">
+        <button class="btn danger full" onclick="logout()">🚪 Logout</button>
+
+        <!-- Optional: wipe registered account + all data -->
+        <button class="btn full" onclick="resetAccount()">
+          🧹 Reset Account & Data
+        </button>
+
+        <div class="tiny muted">
+          Reset removes the saved account and all app data (steps/mood/history).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="page">
+    <div class="topbar">
+      <button class="iconBtn" onclick="goBack()">←</button>
+      <div class="topTitle">About</div>
+      <div style="width:42px"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="sectionTitle">About FitLife</h2>
+      <p class="muted">
+        Your personal daily health assistant. Track steps, mood, and view weekly progress.
+      </p>
+      <div class="tiny muted">Next upgrade: SQLite + multiple users.</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM MENU -->
+  <div id="bottomMenu" class="bottomNav">
+    <button class="navBtn" onclick="openPage('menu')">🏠<span>Home</span></button>
+    <button class="navBtn" onclick="openPage('mood')">😊<span>Mood</span></button>
+    <button class="navBtn" onclick="openPage('steps')">🚶<span>Steps</span></button>
+    <button class="navBtn" onclick="openPage('stats')">📊<span>Stats</span></button>
+    <button class="navBtn" onclick="openPage('profile')">👤<span>Profile</span></button>
+  </div>
+
+  <!-- Cordova -->
+  <script src="cordova.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
