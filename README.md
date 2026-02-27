@@ -76,5 +76,4 @@ LinkedIn: (https://www.linkedin.com/in/muhammed-ali-t%C3%BCrk-801325238/)
 
 
 Open to relocation across Europe  
-
 LinkedIn: (PUT YOUR LINKEDIN)
