@@ -48,7 +48,7 @@ All user data is stored securely on the device using localStorage.
 
 You can download and test the Android application here:
 
-👉 APK Download: (PASTE YOUR GOOGLE DRIVE LINK HERE)
+👉 APK Download: (https://drive.google.com/drive/folders/1DGOCncoO0LSgT9TNWbp2KZxsTczXt4YL?usp=sharing)
 
 Installation steps:
 1. Download APK
@@ -67,13 +67,12 @@ Full source code is available in this repository.
 ## 👨‍💻 Developer
 
 Muhammed Ali Türk  
-Junior Mobile Developer (Android / Apache Cordova) 
 Junior Mobile Developer (Android / Apache Cordova)  
 Open to relocation across Europe  
 
-LinkedIn: (https://www.linkedin.com/in/muhammed-ali-t%C3%BCrk-801325238/)
-
 
 
 Open to relocation across Europe  
-LinkedIn: (PUT YOUR LINKEDIN)
+LinkedIn: (https://www.linkedin.com/in/muhammed-ali-t%C3%BCrk-801325238/)
+
+
