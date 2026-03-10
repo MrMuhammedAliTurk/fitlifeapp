@@ -103,52 +103,137 @@ These plugins will enable future features such as:
 - Profile photo support
 - Native dialogs
 
+---
+
+# 📂 Project Structure
+
+```
+FitLifeApp
+│
+├── www
+│   ├── css
+│   │   ├── index.css
+│   │   └── style.css
+│   │
+│   ├── js
+│   │   └── index.js
+│   │
+│   └── index.html
+│
+├── platforms
+├── plugins
+└── config.xml
+```
 
 ---
 
-## 📊 Application Purpose
+# ⚙️ Installation
 
-This application was built to help users maintain healthy daily habits by tracking their physical activity and visualizing weekly progress.
+To run this project locally:
 
-Users can:
-- Record daily steps
-- Track daily activity modes
-- View weekly performance via chart
-- Store and manage data locally
+Clone the repository:
 
-All user data is stored securely on the device using localStorage.
+```bash
+git clone https://github.com/YOUR_USERNAME/FitLifeApp.git
+```
 
----
+Go to the project directory:
 
-## 📥 APK Download (Test the App)
+```bash
+cd FitLifeApp
+```
 
-You can download and test the Android application here:
+Add the Android platform:
 
-👉 APK Download: (https://drive.google.com/drive/folders/1DGOCncoO0LSgT9TNWbp2KZxsTczXt4YL?usp=sharing)
+```bash
+cordova platform add android
+```
 
-Installation steps:
-1. Download APK
-2. Transfer to Android device
-3. Allow installation from unknown sources
-4. Install and run the application
+Run the project:
 
----
-
-## 💻 Source Code
-
-Full source code is available in this repository.
+```bash
+cordova run android
+```
 
 ---
 
-## 👨‍💻 Developer
+# 📸 Screenshots
 
-Muhammed Ali Türk  
-Junior Mobile Developer (Android / Apache Cordova)  
-Open to relocation across Europe  
+Application interface screenshots are available in the Google Drive folder below.
 
+Screens include:
 
+- Login screen
+- Dashboard
+- Step tracking page
+- Mood tracking page
+- Weekly statistics
+- Profile page
 
-Open to relocation across Europe  
-LinkedIn: (https://www.linkedin.com/in/muhammed-ali-t%C3%BCrk-801325238/)
+---
+
+# 📁 Project Files (Google Drive)
+
+You can also access the full project files and screenshots here:
+
+**Google Drive:**
+
+https://drive.google.com/drive/folders/1DGOCncoO0LSgT9TNWbp2KZxsTczXt4YL
+
+---
+
+# 🔗 GitHub Repository
+
+You can view the source code and updates here:
+
+https://github.com/MrMuhammedAliTurk/fitlifeapp
+
+---
+
+# 🎯 Future Improvements
+
+Planned improvements for the next versions of the project:
+
+- SQLite database integration
+- Push notifications
+- Habit tracking system
+- Health analytics dashboard
+- Data export (CSV / JSON)
+- Cloud synchronization
+- Google Fit integration
+- Advanced progress analytics
+
+---
+
+# 👨‍💻 Developer
+
+**Muhammed Ali Türk**
+
+Computer Programming Student
+
+Interested in:
+
+- Mobile Application Development
+- Hybrid Mobile Applications
+- JavaScript Applications
+- Software Development
+
+---
+
+# 📬 Contact
+Linkedin:
+https://www.linkedin.com/in/muhammed-ali-t%C3%BCrk-801325238/
+
+If you have any questions or would like to collaborate:
+
+📧 Email  
+yourmail@example.com
+
+💻 GitHub  
+xxxxxxxx
+
+📁 Project Files  
+xxxxxxxx
+
 
 
