@@ -1,32 +1,108 @@
-# 📱 Health Tracker Mobile App (Android - Apache Cordova)
+# 📱 FitLife Assistant
 
-This project is a mobile health tracking application developed using Apache Cordova for Android devices.
+**FitLife Assistant** is a hybrid mobile health tracking application developed using **Apache Cordova**.  
+The goal of this project is to create a simple but powerful personal health assistant that helps users monitor their **daily physical activity, mood, and personal health habits**.
 
-The application allows users to track their daily steps, record daily modes, and monitor weekly progress through a visual chart.
+This application demonstrates practical experience with **mobile UI development, local data management, and hybrid mobile application architecture** using modern web technologies.
 
----
-
-## 🚀 Features
-
-- 🔐 User login system  
-- 👣 Daily step tracking  
-- 📝 Daily mode tracking  
-- 📊 Weekly progress chart  
-- 💾 Data stored locally on device (localStorage)  
-- 📱 Responsive mobile UI  
-- ⚡ Fast and lightweight performance  
+The project was developed as part of my personal learning process in **mobile software development** and aims to showcase my ability to design and build complete mobile applications.
 
 ---
 
-## 🛠️ Technologies Used
+# 🚀 Project Overview
 
-- Apache Cordova  
-- HTML5  
-- CSS3  
-- JavaScript  
-- Chart.js (weekly graph visualization)  
-- Android SDK  
-- LocalStorage for data persistence  
+FitLife Assistant is designed as a **lightweight personal health assistant** that works offline and allows users to track their daily habits.
+
+The application includes features such as:
+
+- Daily step tracking
+- Mood tracking
+- Weekly statistics
+- User profile management
+- Health habit monitoring
+
+The main objective of the project is to provide a **clean, intuitive and mobile-friendly interface** while keeping the system simple and efficient.
+
+---
+
+# ✨ Main Features
+
+### 👤 User System
+- User registration system
+- Login authentication
+- Session management
+- Profile page
+- User-based data storage
+
+### 👣 Activity Tracking
+- Daily step counter
+- Custom step input
+- Daily step goal
+- Step progress bar
+- Weekly step statistics
+
+### 😊 Mood Tracking
+- Daily mood selection
+- Mood history tracking
+- Mood notes
+- Weekly mood statistics
+
+### 📊 Statistics System
+- Weekly activity charts
+- Daily data storage
+- Progress visualization
+
+### 💧 Health Tracking
+- Water intake tracking
+- Calorie tracking
+- Daily habit tracking
+
+### 🏆 Motivation System
+- Streak tracking
+- Achievement badges
+- Daily progress feedback
+
+### 🎨 User Interface
+- Dark mode interface
+- Mobile-first responsive layout
+- Dashboard style main menu
+- Smooth page transitions
+
+---
+
+# 🛠 Technologies Used
+
+This project was built using the following technologies:
+
+- **Apache Cordova**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Canvas API (for charts)**
+- **LocalStorage (current storage system)**
+
+Future versions of the project will include **SQLite database integration** for more advanced data management.
+
+---
+
+# 📦 Cordova Plugins
+
+The project is designed to support the following plugins:
+
+- `cordova-sqlite-storage`
+- `cordova-plugin-local-notification`
+- `cordova-plugin-file`
+- `cordova-plugin-camera`
+- `cordova-plugin-dialogs`
+
+These plugins will enable future features such as:
+
+- Offline database storage
+- Notifications
+- File export
+- Profile photo support
+- Native dialogs
+
 
 ---
 
